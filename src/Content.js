@@ -1,4 +1,4 @@
-import {  useEffect } from 'react';
+import { useEffect } from 'react';
 
 export default function Content(props) {
   useEffect(() => {
@@ -11,8 +11,26 @@ export default function Content(props) {
         ? document.selection.createRange().text
         : document.getSelection().getRangeAt(0);
       document.getElementById('input').value = t;
+      props.setPosition([t.startOffset, t.endOffset]);
       props.setText(document.getElementById('input').value);
     }
   });
-  return <p id='content'>{props.content}</p>;
+  return (
+    <>
+    <input id='input' type='text' style={{ display: 'none' }}></input>
+    <div className='App'>
+      <div className='container'>
+        <p id='content'>{props.page[0].content}</p>
+      </div>
+      <small>{props.page[0].pageIndex}</small>
+    </div>
+    <div className='App'>
+      <div className='container'>
+        <p id='content'>{props.page[1].content}</p>
+      </div>
+      <small>{props.page[1].pageIndex}</small>
+    </div>
+    
+    </>
+  );
 }
