@@ -15,7 +15,6 @@ function App() {
   const [pagArr, setPagArr] = useState([]);
   const [word, setWord] = useState();
 
-  console.log(pagArr[index]);
   useEffect(() => {
     if (pagArr.length <= 0 && !loading && !error) {
       setPagArr(handlePages(data.book.pages));
