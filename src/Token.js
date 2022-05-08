@@ -2,7 +2,6 @@ export default function Token({ word, setWord, title, author }) {
   return (
     <div id='wrapper'>
       <div id='container'>
-        <h1>Double Click on Word or Highlight</h1>
         <input id='input' type='text' style={{ display: 'none' }}></input>
         <section className='open-book'>
           <header>
