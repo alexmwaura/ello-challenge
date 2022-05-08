@@ -16,21 +16,32 @@ export default function Content(props) {
     }
   });
   return (
-    <>
-    <input id='input' type='text' style={{ display: 'none' }}></input>
-    <div className='App'>
-      <div className='container'>
-        <p id='content'>{props.page[0].content}</p>
+    <div id='wrapper'>
+      <div id='container'>
+        <h1>Double Click on Word or Highlight</h1>
+        <input id='input' type='text' style={{ display: 'none' }}></input>
+        <section className='open-book'>
+          <header>
+            <h1>{props.title}</h1>
+            <h6>{props.author}</h6>
+          </header>
+          <article className='article'>
+            <div className='page'>
+              <p className='content'>{props.page[0].content}</p>
+            </div>
+            <br />
+            <div className='page'>
+              <p className='content'>{props.page[1].content}</p>
+            </div>
+          </article>
+          <footer>
+            <ol id='page-numbers'>
+              <li>{props.page[0].pageIndex}</li>
+              <li>{props.page[1].pageIndex}</li>
+            </ol>
+          </footer>
+        </section>
       </div>
-      <small>{props.page[0].pageIndex}</small>
     </div>
-    <div className='App'>
-      <div className='container'>
-        <p id='content'>{props.page[1].content}</p>
-      </div>
-      <small>{props.page[1].pageIndex}</small>
-    </div>
-    
-    </>
   );
 }
