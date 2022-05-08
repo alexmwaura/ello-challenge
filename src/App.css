@@ -31,14 +31,17 @@ body {
   }
 }
 #wrapper {
+  margin-top: -5rem;
   margin-left: auto;
   margin-right: auto;
   max-width: 80em;
+  padding: 4em;
+  justify-content: center;
+  align-items: center;
 }
 
 #container {
   float: left;
-  padding: 5em;
   width: 100%;
 }
 
@@ -65,6 +68,7 @@ body {
   box-shadow: rgba(0, 0, 0, 0.5) 0 1em 3em;
   color: #000;
   padding: 2em;
+  max-height: max-content;
 }
 
 .open-book * {
@@ -392,7 +396,8 @@ body {
 .nav_buttons {
   /* width: 80vw; */
   /* padding: 30px; */
-  color: #fff;
+  /* font-size: 150px; */
+  /* font-weight: 900; */
   justify-content: center;
   align-items: center;
 }
@@ -419,7 +424,7 @@ body {
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 20px;
+  padding: 0.5em;
 }
 .content {
   margin-top: 6rem;
@@ -427,4 +432,146 @@ body {
   justify-content: center;
   bottom: 0;
   cursor: pointer;
+}
+.selected {
+  font-size: 300px;
+}
+
+.button-18 {
+  align-items: center;
+  background-color: #192632;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, 'Segoe UI', Roboto,
+    'Helvetica Neue', 'Fira Sans', Ubuntu, Oxygen, 'Oxygen Sans', Cantarell,
+    'Droid Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+    'Lucida Grande', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  /* max-width: 480px; */
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus {
+  background-color: #334254;
+  color: #ffffff;
+}
+
+.button-18:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+.button-18:disabled {
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.text-effect {
+  overflow: hidden;
+  position: relative;
+  filter: contrast(110%) brightness(190%);
+  height: 50vh;
+  display: grid;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  width: max-content;
+  background: #8b4513;
+  border-radius: 50%;
+
+  /* box-sizing: border-box; */
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: 900;
+  font-style: normal;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+}
+
+.middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+.bar {
+  width: 10px;
+  height: 70px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1.2s linear infinite;
+}
+.bar1 {
+  animation-delay: 0.1s;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.3s;
+}
+.bar4 {
+  animation-delay: 0.4s;
+}
+.bar5 {
+  animation-delay: 0.5s;
+}
+.bar6 {
+  animation-delay: 0.6s;
+}
+.bar7 {
+  animation-delay: 0.7s;
+}
+.bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+  }
+  50% {
+    transform: scaleY(1);
+    background: yellowgreen;
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
 }
