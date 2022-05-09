@@ -19,9 +19,12 @@ export default function Token({ word, setWord, title, author }) {
           </article>
           <footer>
             <ol id='page-numbers'>
+            <li>
               <button className='button-18' onClick={() => setWord(null)}>
                 Done
               </button>
+              </li>
+              <li></li>
             </ol>
           </footer>
         </section>
