@@ -30,11 +30,21 @@ export default function Content(props) {
           </header>
           <article className='article'>
             <div className='page'>
-              <p className={`content`}>{props.page[0].content}</p>
+              <p
+                className={`content`}
+                onClick={()=>props.setTokens(props.page[0].tokens)}
+              >
+                {props.page[0].content}
+              </p>
             </div>
             <br />
             <div className='page'>
-              <p className={`content`}>{props.page[1].content}</p>
+              <p
+                className={`content`}
+                onClick={()=>props.setTokens(props.page[1].tokens)}
+              >
+                {props.page[1].content}
+              </p>
             </div>
           </article>
           <footer>

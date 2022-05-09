@@ -14,25 +14,21 @@ function App() {
   const [position, setPosition] = useState([]);
   const [pagArr, setPagArr] = useState([]);
   const [word, setWord] = useState();
-
+  const [tokens, setTokens] = useState([]);
 
   useEffect(() => {
     if (pagArr.length <= 0 && !loading && !error) {
       setPagArr(handlePages(data.book.pages));
     }
     if (position.length > 1) {
-      let res = [];
-      pagArr[index].map((pos) =>
-        // eslint-disable-next-line array-callback-return
-        pos.tokens.filter((tok) => {
-          if (tok.position.join('') === position.join('')) {
-            res.push(tok.value);
-            setWord(res[0]);
-          }
-        })
-      );
+      // eslint-disable-next-line array-callback-return
+      tokens.filter((tok) => {
+        if (tok.position.join('') === position.join('')) {
+          setWord(tok.value);
+        }
+      });
     }
-  }, [data, error, index, loading, pagArr, position]);
+  }, [data, error, index, loading, pagArr, position, tokens]);
 
   function handleNextPage() {
     if (index < pagArr.length - 1) {
@@ -71,6 +67,7 @@ function App() {
           author={data.book.author}
           page={pagArr[index]}
           setPosition={setPosition}
+          setTokens={setTokens}
         />
         <Footer
           handlePreviousPage={handlePreviousPage}
