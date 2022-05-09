@@ -10,15 +10,19 @@ export default function Content(props) {
       t = document.all
         ? document.selection.createRange().text
         : document.getSelection().getRangeAt(0);
-      props.setPosition([t.startOffset, t.endOffset]);
+      if (props.page[0].pageIndex === 10 && t.startOffset > 226) {
+        props.setPosition([t.startOffset - 1, t.endOffset - 1]);
+      } else {
+        props.setPosition([t.startOffset, t.endOffset]);
+      }
     }
   });
   return (
     <div id='wrapper'>
       <div id='container'>
-      <h1 style={{ textAlign: 'center', marginTop: '2rem', padding: '2px' }}>
-        Double Click on Word or Highlight
-      </h1>
+        <h1 style={{ textAlign: 'center', marginTop: '2rem', padding: '2px' }}>
+          Double Click on Word or Highlight
+        </h1>
         <section className='open-book'>
           <header>
             <h1>{props.title}</h1>
