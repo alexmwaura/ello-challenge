@@ -243,7 +243,7 @@ body {
 /*** MEDIA QUERIES ***/
 @media only screen and (min-width: 50em) {
   .open-book {
-    margin: 1em;
+    margin: 3em;
     position: relative;
   }
 
