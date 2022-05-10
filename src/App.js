@@ -23,7 +23,7 @@ function App() {
     if (position.length > 1) {
       // eslint-disable-next-line array-callback-return
       tokens.filter((tok) => {
-        if (tok.position.join('') === position.join('')) {
+        if (tok.position.includes(position[0] && position[1])) {
           setWord(tok.value);
         }
       });
