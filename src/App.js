@@ -17,7 +17,7 @@ function App() {
   const [tokens, setTokens] = useState([]);
 
   useEffect(() => {
-    if (pagArr.length <= 0 && !loading && !error) {
+    if (!loading && !error) {
       setPagArr(handlePages(data.book.pages));
     }
     if (position.length > 1) {
