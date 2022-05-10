@@ -1,8 +1,7 @@
 export default function Token({ word, setWord, title, author }) {
   return (
     <div id='wrapper'>
-      <div id='container'>
-        <input id='input' type='text' style={{ display: 'none' }}></input>
+      <div id='container' style={{marginTop: '4rem'}}>
         <section className='open-book'>
           <header>
             <h1>{title}</h1>
@@ -19,10 +18,10 @@ export default function Token({ word, setWord, title, author }) {
           </article>
           <footer>
             <ol id='page-numbers'>
-            <li>
-              <button className='button-18' onClick={() => setWord(null)}>
-                Done
-              </button>
+              <li>
+                <button className='button-18' onClick={() => setWord(null)}>
+                  Done
+                </button>
               </li>
               <li></li>
             </ol>

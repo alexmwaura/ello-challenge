@@ -20,7 +20,7 @@ export default function Content(props) {
   return (
     <div id='wrapper'>
       <div id='container'>
-        <h1 style={{ textAlign: 'center', marginTop: '2rem', padding: '2px' }}>
+        <h1 style={{ textAlign: 'center' }}>
           Double Click on Word or Highlight
         </h1>
         <section className='open-book'>
