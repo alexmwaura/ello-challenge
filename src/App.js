@@ -42,6 +42,11 @@ function App() {
     }
   }
 
+  function handleCloseToken() {
+    setWord(null);
+    setPosition([]);
+  }
+
   if (loading) return <Loader />;
 
   if (error)
@@ -53,7 +58,7 @@ function App() {
   if (word) {
     return (
       <Token
-        setWord={setWord}
+        handleCloseToken={handleCloseToken}
         word={word}
         title={data.book.title}
         author={data.book.author}
